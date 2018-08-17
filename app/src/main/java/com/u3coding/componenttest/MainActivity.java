@@ -5,8 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.login.LoginActivity;
-import com.example.share.ShareActivity;
+import com.alibaba.android.arouter.launcher.ARouter;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -21,13 +20,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent intent;
         switch (view.getId()){
             case R.id.login:
-                intent = new Intent(this, LoginActivity.class);
-                startActivity(intent);
+               ARouter.getInstance().build("/login/login").withString("share_content", "分享数据").navigation();
                 break;
         case R.id.share:
-                intent = new Intent(this, ShareActivity.class);
-                startActivity(intent);
-                break;
+                ARouter.getInstance().build("/share/share").withString("share_content", "分享数据").navigation();
+               break;
         }
     }
 }
