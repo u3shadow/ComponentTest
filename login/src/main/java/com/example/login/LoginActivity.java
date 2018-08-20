@@ -12,7 +12,7 @@ public class LoginActivity extends AppCompatActivity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.login_activity_login);
         ARouter.getInstance().build("/share/share").withString("share_content", "分享数据").navigation();
     }
 }

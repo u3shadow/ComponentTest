@@ -6,6 +6,7 @@ if(isRunAlone.toBoolean()) {
 
 android {
     compileSdkVersion 28
+    resourcePrefix "login_"
     sourceSets {
         main {
             // 单独调试与集成调试时使用不同的 AndroidManifest.xml 文件
